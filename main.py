@@ -1,6 +1,7 @@
 from summarizer.preprocessing import preprocess_text
 from summarizer.scoring import count_words, score_senteces
 from summarizer.extractive import select_top_sentences
+from summarizer.ai_summarizer import ai_summarize
 
 def input_lines():
     print("Enter text here: ")
@@ -38,6 +39,10 @@ def main():
     print("\nSummary:")
     for s in summary:
         print(s)
+
+    print("\n--AI Summary--")
+    ai_summary = ai_summarize(text)
+    print(ai_summary)
 
 
 if __name__ == "__main__":
